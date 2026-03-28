@@ -1,8 +1,58 @@
 [
-  { "icon": "globe", "title": "Website Development", "image": "assets/images/services/dev.png", "desc": "E-commerce, SaaS, and portfolio sites built with modern tech stacks for speed and scalability." },
-  { "icon": "wrench", "title": "Website Maintenance", "image": "assets/images/services/maintenance.png", "desc": "Ongoing support, updates, and performance monitoring to keep your site running flawlessly." },
-  { "icon": "megaphone", "title": "Digital Marketing", "image": "assets/images/services/marketing.png", "desc": "SEO, social media marketing, and paid campaigns that drive real, measurable results." },
-  { "icon": "palette", "title": "Graphic & Poster Design", "image": "assets/images/services/design.png", "desc": "Eye-catching visuals, brand identity, and marketing materials that stand out." },
-  { "icon": "bar-chart-3", "title": "Website Analytics", "image": "assets/images/services/analytics.png", "desc": "Data-driven insights and reporting to understand user behavior and optimize conversions." },
-  { "icon": "bot", "title": "Automation", "image": "assets/images/services/automation.png", "desc": "Email, call, and form automation to streamline workflows and boost efficiency." }
+  {
+    "icon": "layout",
+    "title": "Website Development",
+    "subheading": "Website Development Services in India",
+    "image": "assets/images/services/dev.png",
+    "shortDesc": "Professional website development services in India for startups, small businesses, and growing brands.",
+    "longDesc": "We build fast, responsive, and SEO-friendly websites that convert visitors into customers. Our team specializes in affordable website development for startups and responsive web design in India.",
+    "bullets": [
+      "Custom business websites",
+      "Startup landing pages",
+      "E-commerce website development",
+      "Performance & SEO optimization"
+    ]
+  },
+  {
+    "icon": "bot",
+    "title": "AI Automation",
+    "subheading": "AI Automation Services for Businesses",
+    "image": "assets/images/services/automation.png",
+    "shortDesc": "Automate repetitive tasks and improve efficiency using advanced AI automation solutions.",
+    "longDesc": "From chatbots to workflow automation, we design smart systems that save time and increase productivity. We provide AI solutions for startups to streamline business automation using AI.",
+    "bullets": [
+      "AI chatbots for customer support",
+      "Business workflow automation",
+      "AI tools integration",
+      "Data-driven automation solutions"
+    ]
+  },
+  {
+    "icon": "palette",
+    "title": "UI/UX Design",
+    "subheading": "UI/UX Design Services for Startups",
+    "image": "assets/images/services/design.png",
+    "shortDesc": "Creating intuitive, user-friendly, and visually engaging digital experiences.",
+    "longDesc": "We design interfaces that improve user engagement and drive conversions. Our UI UX design services focus on modern user experience design for startups using scalable design systems.",
+    "bullets": [
+      "Website & app UI design",
+      "User experience optimization",
+      "Wireframing & prototyping",
+      "Design systems for scalability"
+    ]
+  },
+  {
+    "icon": "code",
+    "title": "Software Development",
+    "subheading": "Custom Software Development Services",
+    "image": "assets/images/services/dev.png",
+    "shortDesc": "Scalable software development services tailored to your business needs.",
+    "longDesc": "From MVP development to full-scale applications, we build secure and high-performance solutions. As a leading software development company in India, we provide expert SaaS development and custom software solutions.",
+    "bullets": [
+      "Custom business software",
+      "SaaS product development",
+      "MVP development for startups",
+      "Web & mobile applications"
+    ]
+  }
 ]

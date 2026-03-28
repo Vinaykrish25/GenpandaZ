@@ -6,11 +6,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         // Render Sections
         renderAbout();
-        await renderServices();
         renderWhyChooseUs();
+        await renderServices();
+        renderRemoteAdvantage();
+        renderFutureVision();
+        renderProcess();
         await renderPortfolio();
         await renderProducts();
+        renderCTASection();
         await renderTestimonials();
+        renderFAQ();
         renderContact();
     } catch (err) {
         console.error('Error during section rendering:', err);
@@ -29,7 +34,7 @@ function renderAbout() {
     if (!section) return;
 
     section.innerHTML = `
-        <section id="about" class="py-12 bg-background">
+        <section id="about" class="py-24 bg-background">
             <div class="container mx-auto px-4">
                 <div class="reveal max-w-3xl mx-auto text-center mb-16">
                     <h2 class="font-display text-4xl md:text-5xl font-bold">
@@ -37,44 +42,24 @@ function renderAbout() {
                     </h2>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    <div class="reveal flex justify-center lg:justify-end">
-                        <div class="relative rounded-2xl overflow-hidden shadow-2xl group max-w-4xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal flex justify-center">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl group max-w-md">
                             <img 
                                 src="assets/images/about/about-us.png" 
-                                alt="GenpandaZ Team collaborating" 
+                                alt="Genpandaz Team" 
                                 class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                             />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <p class="text-white text-xs font-medium">Fueled by curiosity, driven by technology.</p>
-                            </div>
                         </div>
                     </div>
 
-                    <div class="reveal space-y-6" style="transition-delay: 0.2s;">
-                        <div class="space-y-6">
-                            <p class="text-lg text-muted-foreground leading-relaxed">
-                                GenpandaZ is a technology startup driven by a group of young, motivated technologists who believe the future of business is powered by intelligent digital systems. We simplify the complex, removing friction through software development, automation engineering, and data intelligence.
-                            </p>
-                            <p class="text-lg text-muted-foreground leading-relaxed">
-                                Our team combines deep expertise in modern tech stacks with a bold, experimental mindset to design digital products that deliver real value. Focused on curiosity and practical innovation, we don't just solve today's challenges—we build the intelligent platforms and automated systems that move industries forward and help businesses thrive in an ever-changing digital landscape.
-                            </p>
-                            <p class="text-lg text-muted-foreground leading-relaxed">
-                                Through continuous learning and innovation, we make advanced technology accessible and impactful for businesses of all sizes, ensuring success is built together as a team.
-                            </p>
-                        </div>
-                        <div class="pt-4 border-t border-border">
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <p class="text-primary font-bold text-2xl">Practical</p>
-                                    <p class="text-sm text-muted-foreground uppercase tracking-tight">Innovation</p>
-                                </div>
-                                <div>
-                                    <p class="text-primary font-bold text-2xl">Collective</p>
-                                    <p class="text-sm text-muted-foreground uppercase tracking-tight">Growth</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="reveal space-y-6">
+                        <p class="text-xl text-muted-foreground leading-relaxed">
+                            Genpandaz is a remote-first IT services startup in India focused on helping businesses turn ideas into scalable digital products. We combine technology, design, and automation to deliver high-performance solutions tailored for startups and growing companies.
+                        </p>
+                        <p class="text-xl text-muted-foreground leading-relaxed">
+                            Our mission is simple — build smart, efficient, and future-ready digital systems that help businesses grow faster.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -91,35 +76,66 @@ async function renderServices() {
         const services = await response.json();
 
         section.innerHTML = `
-            <section id="services" class="py-12 bg-secondary/30">
+            <section id="services" class="py-24 bg-secondary/30">
                 <div class="container mx-auto px-4">
-                    <div class="reveal text-center max-w-2xl mx-auto">
-                        <h2 class="font-display text-3xl md:text-5xl font-bold">
-                            Our <span class="gradient-text">Services</span>
+                    <div class="reveal text-center max-w-4xl mx-auto">
+                        <h2 class="font-display text-4xl md:text-5xl font-bold">
+                            Our IT Services in <span class="gradient-text">India</span>
                         </h2>
-                        <p class="mt-4 text-muted-foreground text-lg">
-                            End-to-end digital solutions tailored to grow your business.
+                        <h3 class="mt-4 text-xl font-medium text-primary uppercase tracking-wider">Remote-First Solutions</h3>
+                        <p class="mt-6 text-muted-foreground text-lg leading-relaxed">
+                            Genpandaz is a remote-first IT services company in India offering end-to-end digital solutions including website development, AI automation, UI/UX design, and custom software development. We help startups and businesses build scalable, future-ready products.
                         </p>
                     </div>
 
-                    <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
                         ${services.map((s, i) => `
-                            <div class="reveal" style="transition-delay: ${i * 0.08}s;">
-                                <div class="glass-card rounded-2xl overflow-hidden h-full group hover:scale-[1.03] transition-all duration-300 flex flex-col">
-                                    <div class="h-48 relative overflow-hidden">
+                            <div class="reveal" style="transition-delay: ${i * 0.1}s;">
+                                <div class="glass-card rounded-3xl overflow-hidden h-full group hover:shadow-2xl transition-all duration-500 border border-white/10 flex flex-col">
+                                    <div class="h-64 relative overflow-hidden">
                                         <img 
                                             src="${s.image}" 
                                             alt="${s.title}" 
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
-                                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
-                                        <div class="absolute top-4 left-4 h-12 w-12 rounded-xl gradient-bg flex items-center justify-center z-10">
-                                            <i data-lucide="${s.icon.toLowerCase()}" class="h-6 w-6 text-primary-foreground"></i>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                        <div class="absolute bottom-6 left-6 z-10">
+                                            <div class="h-12 w-12 rounded-2xl gradient-bg flex items-center justify-center mb-3">
+                                                <i data-lucide="${s.icon.toLowerCase()}" class="h-6 w-6 text-primary-foreground"></i>
+                                            </div>
+                                            <h3 class="text-2xl font-bold text-white">${s.title}</h3>
                                         </div>
                                     </div>
-                                    <div class="p-6 flex-1 flex flex-col justify-center">
-                                        <h3 class="font-display text-lg font-semibold">${s.title}</h3>
-                                        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">${s.desc}</p>
+                                    <div class="p-8 flex-1 flex flex-col">
+                                        <h4 class="text-primary font-semibold mb-3">${s.subheading}</h4>
+                                        <p class="text-muted-foreground leading-relaxed transition-all duration-300">
+                                            ${s.shortDesc}
+                                        </p>
+                                        
+                                        <div id="service-content-${i}" class="hidden mt-6 space-y-6 animate-in fade-in slide-in-from-top-4 duration-500">
+                                            <p class="text-muted-foreground leading-relaxed italic border-l-2 border-primary/30 pl-4">
+                                                ${s.longDesc}
+                                            </p>
+                                            <ul class="grid grid-cols-1 gap-3">
+                                                ${s.bullets.map(b => `
+                                                    <li class="flex items-center gap-3 text-sm font-medium">
+                                                        <i data-lucide="check-circle-2" class="h-4 w-4 text-primary shrink-0"></i>
+                                                        ${b}
+                                                    </li>
+                                                `).join('')}
+                                            </ul>
+                                        </div>
+
+                                        <div class="mt-auto pt-8">
+                                            <button 
+                                                id="service-btn-${i}"
+                                                onclick="toggleService(${i})"
+                                                class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:gap-3 transition-all group/btn"
+                                            >
+                                                <span>Read More</span>
+                                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-open:rotate-180"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -134,40 +150,50 @@ async function renderServices() {
     }
 }
 
+window.toggleService = (id) => {
+    const content = document.getElementById(`service-content-${id}`);
+    const btn = document.getElementById(`service-btn-${id}`);
+    const icon = btn.querySelector('[data-lucide]');
+    
+    if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        btn.querySelector('span').textContent = 'Read Less';
+        if (icon) icon.style.transform = 'rotate(180deg)';
+    } else {
+        content.classList.add('hidden');
+        btn.querySelector('span').textContent = 'Read More';
+        if (icon) icon.style.transform = 'rotate(0deg)';
+    }
+}
+
 function renderWhyChooseUs() {
     const section = document.getElementById('why-choose-us-section');
     if (!section) return;
 
     const reasons = [
-        "Young & Agile Team",
-        "Data-Driven Decisions",
-        "Transparent Communication",
-        "Fast Turnaround Times",
-        "Modern Tech Stack",
-        "Dedicated Support",
+        "Remote-first model for faster and cost-effective delivery",
+        "Startup-focused approach with scalable solutions",
+        "Expertise in AI automation and modern technologies",
+        "Clean, user-focused UI/UX design",
+        "End-to-end development from idea to launch",
     ];
 
     section.innerHTML = `
-        <section class="py-12">
+        <section class="py-24 bg-secondary/30">
             <div class="container mx-auto px-4">
-                <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <div class="reveal">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose GenpandaZ?</h2>
-                        <p class="mt-6 text-muted-foreground text-lg leading-relaxed">
-                            We don't just build websites — we build growth engines. Our team combines creativity, strategy, and technology to deliver results you can measure.
-                        </p>
-                    </div>
+                <div class="reveal text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="font-display text-3xl md:text-5xl font-bold">Why Businesses Choose <span class="gradient-text">Genpandaz</span></h2>
+                </div>
 
-                    <div class="reveal" style="transition-delay: 0.15s;">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            ${reasons.map(r => `
-                                <div class="flex items-center gap-3 glass-card rounded-xl p-4">
-                                    <i data-lucide="check-circle" class="h-5 w-5 text-primary shrink-0"></i>
-                                    <span class="font-medium text-sm">${r}</span>
-                                </div>
-                            `).join('')}
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    ${reasons.map(r => `
+                        <div class="reveal flex items-start gap-4 glass-card rounded-2xl p-6">
+                            <div class="h-8 w-8 rounded-full gradient-bg flex items-center justify-center shrink-0">
+                                <i data-lucide="check" class="h-4 w-4 text-primary-foreground"></i>
+                            </div>
+                            <p class="font-medium text-lg leading-snug">${r}</p>
                         </div>
-                    </div>
+                    `).join('')}
                 </div>
             </div>
         </section>
@@ -344,9 +370,9 @@ async function renderTestimonials() {
             <section id="testimonials" class="py-12 bg-secondary/30">
                 <div class="container mx-auto px-4">
                     <div class="reveal text-center max-w-2xl mx-auto">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Trusted by <span class="gradient-text">Growing Businesses</span></h2>
                         <p class="text-muted-foreground max-w-2xl mx-auto">
-                            Discover why businesses trust GenpandaZ for their digital growth.
+                            Discover why businesses trust Genpandaz for their digital growth.
                         </p>
                     </div>
 
@@ -437,6 +463,141 @@ function renderContact() {
     `;
     lucide.createIcons();
     initContactForm();
+}
+
+function renderRemoteAdvantage() {
+    const section = document.getElementById('remote-advantage-section');
+    if (!section) return;
+
+    section.innerHTML = `
+        <section class="py-24 bg-background">
+            <div class="container mx-auto px-4">
+                <div class="reveal text-center max-w-4xl mx-auto mb-16">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold">Remote IT Services <span class="gradient-text">Across India</span></h2>
+                    <h3 class="mt-4 text-primary font-semibold">Flexible Collaboration & Faster Delivery</h3>
+                    <p class="mt-8 text-xl text-muted-foreground leading-relaxed px-4">
+                        As a remote-first IT company, Genpandaz works with clients across India including Chennai, Bangalore, Hyderabad, and Coimbatore. Our remote model ensures faster delivery, flexible collaboration, and cost-effective solutions. We help you hire remote developers in India and build a dedicated remote tech team for your business.
+                    </p>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function renderFutureVision() {
+    const section = document.getElementById('future-vision-section');
+    if (!section) return;
+
+    section.innerHTML = `
+        <section class="py-24 bg-secondary/30">
+            <div class="container mx-auto px-4">
+                <div class="reveal text-center max-w-4xl mx-auto">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold">Building Future-Ready <span class="gradient-text">Tech Products</span></h2>
+                    <h3 class="mt-4 text-primary font-semibold">SaaS Innovation & Scalable Solutions</h3>
+                    <p class="mt-8 text-xl text-muted-foreground leading-relaxed px-4">
+                        Genpandaz is evolving into a product-based company focused on building scalable SaaS solutions and innovative digital products that solve real-world problems. We are committed to becoming a leading SaaS product company in India, helping startups build tech products that scale.
+                    </p>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function renderProcess() {
+    const section = document.getElementById('process-section');
+    if (!section) return;
+
+    const steps = [
+        { title: "Discovery", desc: "Understand your idea and business goals" },
+        { title: "Strategy", desc: "Plan and design the solution" },
+        { title: "Execution", desc: "Develop and test the product" },
+        { title: "Growth", desc: "Launch and support your growth" }
+    ];
+
+    section.innerHTML = `
+        <section class="py-24 bg-background">
+            <div class="container mx-auto px-4">
+                <div class="reveal text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold">How We <span class="gradient-text">Work</span></h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    ${steps.map((s, i) => `
+                        <div class="reveal relative" style="transition-delay: ${i * 0.1}s;">
+                            <div class="flex flex-col items-center text-center">
+                                <div class="h-16 w-16 rounded-2xl gradient-bg flex items-center justify-center mb-6 text-2xl font-bold text-primary-foreground shadow-lg">
+                                    ${i + 1}
+                                </div>
+                                <h3 class="font-display text-xl font-bold mb-2">${s.title}</h3>
+                                <p class="text-muted-foreground">${s.desc}</p>
+                            </div>
+                            ${i < steps.length - 1 ? `
+                                <div class="hidden lg:block absolute top-8 left-full w-full h-[2px] bg-gradient-to-r from-primary/50 to-transparent -z-10 -ml-8"></div>
+                            ` : ''}
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function renderFAQ() {
+    const section = document.getElementById('faq-section');
+    if (!section) return;
+
+    const faqs = [
+        { q: "What services does Genpandaz offer?", a: "We offer website development, AI automation, UI/UX design, and custom software development." },
+        { q: "Do you work with startups?", a: "Yes, we specialize in working with startups and growing businesses." },
+        { q: "Do you provide remote services across India?", a: "Yes, we work remotely with clients all across India." },
+        { q: "Can you help build SaaS products?", a: "Yes, we provide MVP and full SaaS product development." }
+    ];
+
+    section.innerHTML = `
+        <section class="py-24 bg-secondary/30">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="reveal text-center mb-16">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                </div>
+
+                <div class="space-y-4">
+                    ${faqs.map((f, i) => `
+                        <div class="reveal glass-card rounded-2xl p-6 md:p-8" style="transition-delay: ${i * 0.05}s;">
+                            <h3 class="font-display text-xl font-bold mb-4">${f.q}</h3>
+                            <p class="text-muted-foreground text-lg">${f.a}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function renderCTASection() {
+    const section = document.getElementById('cta-lead-section');
+    if (!section) return;
+
+    section.innerHTML = `
+        <section class="py-24 bg-background overflow-hidden relative">
+            <div class="absolute inset-0 bg-primary/5 -z-10"></div>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <div class="reveal max-w-3xl mx-auto">
+                    <h2 class="font-display text-4xl md:text-6xl font-bold mb-8">Start Your <span class="gradient-text">Project Today</span></h2>
+                    <p class="text-xl text-muted-foreground mb-12">
+                        Looking for reliable IT services in India? Genpandaz is here to help you build, automate, and scale your business. Get a free consultation today and turn your idea into a powerful digital product.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-lg font-bold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-16 px-10 gradient-bg text-primary-foreground hover:opacity-90 shadow-xl shadow-primary/20">
+                            Get a free consultation today
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-lg font-bold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-16 px-10 border-2 border-primary/20 bg-background hover:bg-accent hover:text-accent-foreground">
+                            Start your project with us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
 }
 
 function initContactForm() {
