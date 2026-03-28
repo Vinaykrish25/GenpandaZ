@@ -392,21 +392,13 @@ function renderContact() {
                             <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
                                 Ready to scale your <span class="gradient-text">digital presence?</span>
                             </h2>
+                            <p class="text-lg text-muted-foreground mb-6 leading-relaxed">
+                                We're here to help you navigate the digital landscape. Let's discuss how we can bring your vision to life through innovative design, strategic development, and data-driven marketing solutions.
+                            </p>
                             <p class="text-lg text-muted-foreground mb-10 leading-relaxed">
-                                We're here to help you navigate the digital landscape. Let's discuss how we can bring your vision to life.
+                                Whether you're looking to build a high-converting website, automate your business processes, or scale your brand's reach, our team of experts is ready to partner with you. We specialize in creating digital experiences that not only look stunning but also drive measurable growth for your business.
                             </p>
                             
-                            <div class="space-y-6">
-                                <div class="flex items-center gap-4">
-                                    <div class="h-12 w-12 rounded-xl gradient-bg flex items-center justify-center text-primary-foreground">
-                                        <i data-lucide="mail"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-xs text-muted-foreground uppercase tracking-widest font-bold">Email Us</p>
-                                        <p class="font-medium">contact@genpandaz.com</p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="reveal" style="transition-delay: 0.2s;">
