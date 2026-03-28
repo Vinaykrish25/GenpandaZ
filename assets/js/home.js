@@ -496,6 +496,17 @@ function renderRemoteAdvantage() {
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <div class="reveal space-y-6">
+                        <p class="text-lg text-muted-foreground leading-relaxed">
+                           GenpandaZ works remotely with clients across India including Chennai, Bangalore, Hyderabad, and Coimbatore. Our remote-first approach ensures flexibility, faster delivery, and cost-effective solutions without compromising quality.
+                        </p>
+                        <p class="text-lg text-muted-foreground leading-relaxed">
+                            We help you hire remote developers in India and build a dedicated remote tech team for your business. Our expertise in distributed team management allows us to integrate seamlessly with your existing workflows, providing high-quality software development and AI automation services regardless of your location.
+                        </p>
+                        <p class="text-lg text-muted-foreground leading-relaxed">
+                            Our remote-first culture is built on trust and efficiency, allowing us to deliver scalable SaaS solutions and custom software with unmatched speed. We leverage modern collaboration tools to keep you updated at every stage, ensuring your vision is brought to life with precision and excellence.
+                        </p>
+                    </div>
                     <div class="reveal">
                         <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10">
                             <img 
@@ -504,17 +515,6 @@ function renderRemoteAdvantage() {
                                 class="w-full h-auto object-cover"
                             />
                         </div>
-                    </div>
-                    <div class="reveal space-y-6">
-                        <p class="text-lg text-muted-foreground leading-relaxed">
-                           Genpandaz works remotely with clients across India including Chennai, Bangalore, Hyderabad, and Coimbatore. Our remote-first approach ensures flexibility, faster delivery, and cost-effective solutions without compromising quality.
-                        </p>
-                        <p class="text-lg text-muted-foreground leading-relaxed">
-                            We help you hire remote developers in India and build a dedicated remote tech team for your business. Our expertise in distributed team management allows us to integrate seamlessly with your existing workflows, providing high-quality software development and AI automation services regardless of your location.
-                        </p>
-                        <p class="text-lg text-muted-foreground leading-relaxed">
-                            Our remote-first culture is built on trust and efficiency, allowing us to deliver scalable SaaS solutions and custom software with unmatched speed. We leverage modern collaboration tools to keep you updated at every stage, ensuring your vision is brought to life with precision and excellence.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -593,16 +593,25 @@ function renderFAQ() {
 
     section.innerHTML = `
         <section class="py-16 bg-secondary/30">
-            <div class="container mx-auto px-4 max-w-4xl">
+            <div class="container mx-auto px-4">
                 <div class="reveal text-center mb-12">
                     <h2 class="font-display text-4xl md:text-5xl font-bold">Frequently Asked <span class="gradient-text">Questions</span></h2>
                 </div>
 
-                <div class="space-y-4">
-                    ${faqs.map((f, i) => `
-                        <div class="reveal glass-card rounded-2xl p-6 md:p-8" style="transition-delay: ${i * 0.05}s;">
-                            <h3 class="font-display text-xl font-bold mb-4">${f.q}</h3>
-                            <p class="text-muted-foreground text-lg">${f.a}</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                    ${faqs.map((faq, i) => `
+                        <div class="reveal" style="transition-delay: ${i * 0.1}s;">
+                            <div class="glass-card rounded-2xl p-6 h-full border border-white/5 hover:border-primary/20 transition-all">
+                                <h3 class="font-display text-xl font-bold mb-3 flex items-start gap-3">
+                                    <span class="text-primary mt-1">
+                                        <i data-lucide="help-circle" class="h-5 w-5"></i>
+                                    </span>
+                                    ${faq.q}
+                                </h3>
+                                <p class="text-muted-foreground leading-relaxed pl-8">
+                                    ${faq.a}
+                                </p>
+                            </div>
                         </div>
                     `).join('')}
                 </div>
