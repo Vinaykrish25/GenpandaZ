@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderProcess();
         await renderPortfolio();
         await renderProducts();
-        renderCTASection();
         await renderTestimonials();
         renderFAQ();
         renderContact();
@@ -34,17 +33,17 @@ function renderAbout() {
     if (!section) return;
 
     section.innerHTML = `
-        <section id="about" class="py-24 bg-background">
+        <section id="about" class="py-16 bg-background">
             <div class="container mx-auto px-4">
-                <div class="reveal max-w-3xl mx-auto text-center mb-16">
+                <div class="reveal max-w-3xl mx-auto text-center mb-10">
                     <h2 class="font-display text-4xl md:text-5xl font-bold">
                         Who We <span class="gradient-text">Are</span>
                     </h2>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                     <div class="reveal flex justify-center">
-                        <div class="relative rounded-2xl overflow-hidden shadow-2xl group max-w-md">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl group w-full">
                             <img 
                                 src="assets/images/about/about-us.png" 
                                 alt="GenpandaZ Team" 
@@ -53,12 +52,15 @@ function renderAbout() {
                         </div>
                     </div>
 
-                    <div class="reveal space-y-6">
-                        <p class="text-xl text-muted-foreground leading-relaxed">
-                            GenpandaZ is a remote-first IT services startup in India focused on helping businesses turn ideas into scalable digital products. We combine technology, design, and automation to deliver high-performance solutions tailored for startups and growing companies.
+                    <div class="reveal space-y-8">
+                        <p class="text-lg text-muted-foreground leading-relaxed">
+                            GenpandaZ is your strategic partner in digital transformation. We specialize in building high-impact digital products that drive growth. Our expertise spans full-stack web development, intelligent AI automation, and user-centric UI/UX design.
                         </p>
-                        <p class="text-xl text-muted-foreground leading-relaxed">
-                            Our mission is simple — build smart, efficient, and future-ready digital systems that help businesses grow faster.
+                        <p class="text-lg text-muted-foreground leading-relaxed">
+                            With a remote-first mindset, we provide unparalleled flexibility and cost-efficiency to clients globally. We are committed to building scalable, future-ready systems that help businesses stay ahead in an ever-evolving digital landscape.
+                        </p>
+                        <p class="text-lg text-muted-foreground leading-relaxed">
+                            Whether you're a seed-stage startup or an established enterprise, our team in India turns ambitious ideas into reality with precision. We combine cutting-edge technology and design to deliver high-performance solutions tailored to your needs.
                         </p>
                     </div>
                 </div>
@@ -76,7 +78,7 @@ async function renderServices() {
         const services = await response.json();
 
         section.innerHTML = `
-            <section id="services" class="py-24 bg-secondary/30">
+            <section id="services" class="py-16 bg-secondary/30">
                 <div class="container mx-auto px-4">
                     <div class="reveal text-center max-w-4xl mx-auto">
                         <h2 class="font-display text-4xl md:text-5xl font-bold">
@@ -88,7 +90,7 @@ async function renderServices() {
                         </p>
                     </div>
 
-                    <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                         ${services.map((s, i) => `
                             <div class="reveal" style="transition-delay: ${i * 0.1}s;">
                                 <div class="glass-card rounded-3xl overflow-hidden h-full group hover:shadow-2xl transition-all duration-500 border border-white/10 flex flex-col">
@@ -151,19 +153,35 @@ async function renderServices() {
 }
 
 window.toggleService = (id) => {
-    const content = document.getElementById(`service-content-${id}`);
-    const btn = document.getElementById(`service-btn-${id}`);
-    const icon = btn.querySelector('[data-lucide]');
-    
-    if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
-        btn.querySelector('span').textContent = 'Read Less';
-        if (icon) icon.style.transform = 'rotate(180deg)';
-    } else {
-        content.classList.add('hidden');
-        btn.querySelector('span').textContent = 'Read More';
-        if (icon) icon.style.transform = 'rotate(0deg)';
-    }
+    const allContents = document.querySelectorAll('[id^="service-content-"]');
+    const allBtns = document.querySelectorAll('[id^="service-btn-"]');
+
+    const targetContent = document.getElementById(`service-content-${id}`);
+    const isExpanding = targetContent.classList.contains('hidden');
+
+    // Close all other cards
+    allContents.forEach((content, index) => {
+        const btn = document.getElementById(`service-btn-${index}`);
+        const icon = btn.querySelector('[data-lucide]');
+
+        if (index === id) {
+            if (isExpanding) {
+                content.classList.remove('hidden');
+                btn.querySelector('span').textContent = 'Read Less';
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                btn.querySelector('span').textContent = 'Read More';
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            }
+        } else {
+            content.classList.add('hidden');
+            if (btn) {
+                btn.querySelector('span').textContent = 'Read More';
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    });
 }
 
 function renderWhyChooseUs() {
@@ -179,9 +197,9 @@ function renderWhyChooseUs() {
     ];
 
     section.innerHTML = `
-        <section class="py-24 bg-secondary/30">
+        <section class="py-16 bg-secondary/30">
             <div class="container mx-auto px-4">
-                <div class="reveal text-center max-w-3xl mx-auto mb-16">
+                <div class="reveal text-center max-w-3xl mx-auto mb-10">
                     <h2 class="font-display text-3xl md:text-5xl font-bold">Why Businesses Choose <span class="gradient-text">GenpandaZ</span></h2>
                 </div>
 
@@ -210,7 +228,7 @@ async function renderPortfolio() {
         const projects = await response.json();
 
         section.innerHTML = `
-            <section id="portfolio" class="py-12 bg-secondary/30">
+            <section id="portfolio" class="py-16 bg-secondary/30">
                 <div class="container mx-auto px-4">
                     <div class="reveal text-center max-w-2xl mx-auto">
                         <h2 class="font-display text-3xl md:text-5xl font-bold">
@@ -221,7 +239,7 @@ async function renderPortfolio() {
                         </p>
                     </div>
 
-                    <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         ${projects.map((p, i) => `
                             <div class="reveal" style="transition-delay: ${i * 0.08}s;">
                                 <a 
@@ -271,7 +289,7 @@ async function renderProducts() {
         const products = await response.json();
 
         section.innerHTML = `
-            <section id="products" class="py-12 bg-background">
+            <section id="products" class="py-16 bg-background">
                 <div class="container mx-auto px-4">
                     <div class="reveal text-center max-w-2xl mx-auto">
                         <h2 class="font-display text-3xl md:text-5xl font-bold">
@@ -282,7 +300,7 @@ async function renderProducts() {
                         </p>
                     </div>
 
-                    <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         ${products.map((p, i) => `
                             <div class="reveal" style="transition-delay: ${i * 0.1}s;">
                                 <div class="group relative glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-primary/30 transition-all duration-300">
@@ -367,7 +385,7 @@ async function renderTestimonials() {
         const testimonials = await response.json();
 
         section.innerHTML = `
-            <section id="testimonials" class="py-12 bg-secondary/30">
+            <section id="testimonials" class="py-16 bg-secondary/30">
                 <div class="container mx-auto px-4">
                     <div class="reveal text-center max-w-2xl mx-auto">
                         <h2 class="text-3xl md:text-4xl font-bold mb-4">Trusted by <span class="gradient-text">Growing Businesses</span></h2>
@@ -376,7 +394,7 @@ async function renderTestimonials() {
                         </p>
                     </div>
 
-                    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
                         ${testimonials.map((t, i) => `
                             <div class="reveal" style="transition-delay: ${i * 0.1}s;">
                                 <div class="glass-card rounded-2xl p-6 h-full">
@@ -470,14 +488,34 @@ function renderRemoteAdvantage() {
     if (!section) return;
 
     section.innerHTML = `
-        <section class="py-24 bg-background">
+        <section class="py-16 bg-background">
             <div class="container mx-auto px-4">
-                <div class="reveal text-center max-w-4xl mx-auto mb-16">
+                <div class="reveal text-center max-w-4xl mx-auto mb-12">
                     <h2 class="font-display text-4xl md:text-5xl font-bold">Remote IT Services <span class="gradient-text">Across India</span></h2>
                     <h3 class="mt-4 text-primary font-semibold">Flexible Collaboration & Faster Delivery</h3>
-                    <p class="mt-8 text-xl text-muted-foreground leading-relaxed px-4">
-                        As a remote-first IT company, GenpandaZ works with clients across India including Chennai, Bangalore, Hyderabad, and Coimbatore. Our remote model ensures faster delivery, flexible collaboration, and cost-effective solutions. We help you hire remote developers in India and build a dedicated remote tech team for your business.
-                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <div class="reveal">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+                            <img 
+                                src="assets/images/remote-india.png" 
+                                alt="Remote IT Services India" 
+                                class="w-full h-auto object-cover"
+                            />
+                        </div>
+                    </div>
+                    <div class="reveal space-y-6">
+                        <p class="text-lg text-muted-foreground leading-relaxed">
+                           Genpandaz works remotely with clients across India including Chennai, Bangalore, Hyderabad, and Coimbatore. Our remote-first approach ensures flexibility, faster delivery, and cost-effective solutions without compromising quality.
+                        </p>
+                        <p class="text-lg text-muted-foreground leading-relaxed">
+                            We help you hire remote developers in India and build a dedicated remote tech team for your business. Our expertise in distributed team management allows us to integrate seamlessly with your existing workflows, providing high-quality software development and AI automation services regardless of your location.
+                        </p>
+                        <p class="text-lg text-muted-foreground leading-relaxed">
+                            Our remote-first culture is built on trust and efficiency, allowing us to deliver scalable SaaS solutions and custom software with unmatched speed. We leverage modern collaboration tools to keep you updated at every stage, ensuring your vision is brought to life with precision and excellence.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -489,7 +527,7 @@ function renderFutureVision() {
     if (!section) return;
 
     section.innerHTML = `
-        <section class="py-24 bg-secondary/30">
+        <section class="py-16 bg-secondary/30">
             <div class="container mx-auto px-4">
                 <div class="reveal text-center max-w-4xl mx-auto">
                     <h2 class="font-display text-4xl md:text-5xl font-bold">Building Future-Ready <span class="gradient-text">Tech Products</span></h2>
@@ -515,9 +553,9 @@ function renderProcess() {
     ];
 
     section.innerHTML = `
-        <section class="py-24 bg-background">
+        <section class="py-16 bg-background">
             <div class="container mx-auto px-4">
-                <div class="reveal text-center max-w-3xl mx-auto mb-16">
+                <div class="reveal text-center max-w-3xl mx-auto mb-12">
                     <h2 class="font-display text-4xl md:text-5xl font-bold">How We <span class="gradient-text">Work</span></h2>
                 </div>
 
@@ -554,9 +592,9 @@ function renderFAQ() {
     ];
 
     section.innerHTML = `
-        <section class="py-24 bg-secondary/30">
+        <section class="py-16 bg-secondary/30">
             <div class="container mx-auto px-4 max-w-4xl">
-                <div class="reveal text-center mb-16">
+                <div class="reveal text-center mb-12">
                     <h2 class="font-display text-4xl md:text-5xl font-bold">Frequently Asked <span class="gradient-text">Questions</span></h2>
                 </div>
 
@@ -573,32 +611,7 @@ function renderFAQ() {
     `;
 }
 
-function renderCTASection() {
-    const section = document.getElementById('cta-lead-section');
-    if (!section) return;
 
-    section.innerHTML = `
-        <section class="py-24 bg-background overflow-hidden relative">
-            <div class="absolute inset-0 bg-primary/5 -z-10"></div>
-            <div class="container mx-auto px-4 relative z-10 text-center">
-                <div class="reveal max-w-3xl mx-auto">
-                    <h2 class="font-display text-4xl md:text-6xl font-bold mb-8">Start Your <span class="gradient-text">Project Today</span></h2>
-                    <p class="text-xl text-muted-foreground mb-12">
-                        Looking for reliable IT services in India? GenpandaZ is here to help you build, automate, and scale your business. Get a free consultation today and turn your idea into a powerful digital product.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-lg font-bold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-16 px-10 gradient-bg text-primary-foreground hover:opacity-90 shadow-xl shadow-primary/20">
-                            Get a free consultation today
-                        </a>
-                        <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-lg font-bold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-16 px-10 border-2 border-primary/20 bg-background hover:bg-accent hover:text-accent-foreground">
-                            Start your project with us
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    `;
-}
 
 function initContactForm() {
     const form = document.getElementById('contact-form');
