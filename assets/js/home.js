@@ -47,7 +47,7 @@ function renderAbout() {
                         <div class="relative rounded-2xl overflow-hidden shadow-2xl group max-w-md">
                             <img 
                                 src="assets/images/about/about-us.png" 
-                                alt="Genpandaz Team" 
+                                alt="GenpandaZ Team" 
                                 class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                         </div>
@@ -55,7 +55,7 @@ function renderAbout() {
 
                     <div class="reveal space-y-6">
                         <p class="text-xl text-muted-foreground leading-relaxed">
-                            Genpandaz is a remote-first IT services startup in India focused on helping businesses turn ideas into scalable digital products. We combine technology, design, and automation to deliver high-performance solutions tailored for startups and growing companies.
+                            GenpandaZ is a remote-first IT services startup in India focused on helping businesses turn ideas into scalable digital products. We combine technology, design, and automation to deliver high-performance solutions tailored for startups and growing companies.
                         </p>
                         <p class="text-xl text-muted-foreground leading-relaxed">
                             Our mission is simple — build smart, efficient, and future-ready digital systems that help businesses grow faster.
@@ -84,7 +84,7 @@ async function renderServices() {
                         </h2>
                         <h3 class="mt-4 text-xl font-medium text-primary uppercase tracking-wider">Remote-First Solutions</h3>
                         <p class="mt-6 text-muted-foreground text-lg leading-relaxed">
-                            Genpandaz is a remote-first IT services company in India offering end-to-end digital solutions including website development, AI automation, UI/UX design, and custom software development. We help startups and businesses build scalable, future-ready products.
+                            GenpandaZ is a remote-first IT services company in India offering end-to-end digital solutions including website development, AI automation, UI/UX design, and custom software development. We help startups and businesses build scalable, future-ready products.
                         </p>
                     </div>
 
@@ -182,7 +182,7 @@ function renderWhyChooseUs() {
         <section class="py-24 bg-secondary/30">
             <div class="container mx-auto px-4">
                 <div class="reveal text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="font-display text-3xl md:text-5xl font-bold">Why Businesses Choose <span class="gradient-text">Genpandaz</span></h2>
+                    <h2 class="font-display text-3xl md:text-5xl font-bold">Why Businesses Choose <span class="gradient-text">GenpandaZ</span></h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -372,7 +372,7 @@ async function renderTestimonials() {
                     <div class="reveal text-center max-w-2xl mx-auto">
                         <h2 class="text-3xl md:text-4xl font-bold mb-4">Trusted by <span class="gradient-text">Growing Businesses</span></h2>
                         <p class="text-muted-foreground max-w-2xl mx-auto">
-                            Discover why businesses trust Genpandaz for their digital growth.
+                            Discover why businesses trust GenpandaZ for their digital growth.
                         </p>
                     </div>
 
@@ -476,7 +476,7 @@ function renderRemoteAdvantage() {
                     <h2 class="font-display text-4xl md:text-5xl font-bold">Remote IT Services <span class="gradient-text">Across India</span></h2>
                     <h3 class="mt-4 text-primary font-semibold">Flexible Collaboration & Faster Delivery</h3>
                     <p class="mt-8 text-xl text-muted-foreground leading-relaxed px-4">
-                        As a remote-first IT company, Genpandaz works with clients across India including Chennai, Bangalore, Hyderabad, and Coimbatore. Our remote model ensures faster delivery, flexible collaboration, and cost-effective solutions. We help you hire remote developers in India and build a dedicated remote tech team for your business.
+                        As a remote-first IT company, GenpandaZ works with clients across India including Chennai, Bangalore, Hyderabad, and Coimbatore. Our remote model ensures faster delivery, flexible collaboration, and cost-effective solutions. We help you hire remote developers in India and build a dedicated remote tech team for your business.
                     </p>
                 </div>
             </div>
@@ -495,7 +495,7 @@ function renderFutureVision() {
                     <h2 class="font-display text-4xl md:text-5xl font-bold">Building Future-Ready <span class="gradient-text">Tech Products</span></h2>
                     <h3 class="mt-4 text-primary font-semibold">SaaS Innovation & Scalable Solutions</h3>
                     <p class="mt-8 text-xl text-muted-foreground leading-relaxed px-4">
-                        Genpandaz is evolving into a product-based company focused on building scalable SaaS solutions and innovative digital products that solve real-world problems. We are committed to becoming a leading SaaS product company in India, helping startups build tech products that scale.
+                        GenpandaZ is evolving into a product-based company focused on building scalable SaaS solutions and innovative digital products that solve real-world problems. We are committed to becoming a leading SaaS product company in India, helping startups build tech products that scale.
                     </p>
                 </div>
             </div>
@@ -547,7 +547,7 @@ function renderFAQ() {
     if (!section) return;
 
     const faqs = [
-        { q: "What services does Genpandaz offer?", a: "We offer website development, AI automation, UI/UX design, and custom software development." },
+        { q: "What services does GenpandaZ offer?", a: "We offer website development, AI automation, UI/UX design, and custom software development." },
         { q: "Do you work with startups?", a: "Yes, we specialize in working with startups and growing businesses." },
         { q: "Do you provide remote services across India?", a: "Yes, we work remotely with clients all across India." },
         { q: "Can you help build SaaS products?", a: "Yes, we provide MVP and full SaaS product development." }
@@ -584,7 +584,7 @@ function renderCTASection() {
                 <div class="reveal max-w-3xl mx-auto">
                     <h2 class="font-display text-4xl md:text-6xl font-bold mb-8">Start Your <span class="gradient-text">Project Today</span></h2>
                     <p class="text-xl text-muted-foreground mb-12">
-                        Looking for reliable IT services in India? Genpandaz is here to help you build, automate, and scale your business. Get a free consultation today and turn your idea into a powerful digital product.
+                        Looking for reliable IT services in India? GenpandaZ is here to help you build, automate, and scale your business. Get a free consultation today and turn your idea into a powerful digital product.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-lg font-bold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-16 px-10 gradient-bg text-primary-foreground hover:opacity-90 shadow-xl shadow-primary/20">
