@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | GenpandaZ</title>
+    <meta name="description" content="The page you are looking for does not exist." />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        primary: {
+                            DEFAULT: 'hsl(var(--primary))',
+                            foreground: 'hsl(var(--primary-foreground))',
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body class="bg-background text-foreground font-sans antialiased">
+    <div class="flex min-h-screen items-center justify-center bg-muted/50 dark:bg-muted/10">
+        <div class="text-center glass-card p-12 rounded-3xl border border-white/10 shadow-2xl">
+            <h1 class="mb-4 text-7xl font-bold font-display gradient-text">404</h1>
+            <p class="mb-8 text-2xl font-medium text-muted-foreground">Oops! Page not found</p>
+            <a href="index.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-md font-bold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-12 px-8 gradient-bg text-primary-foreground hover:opacity-90 shadow-lg shadow-primary/20">
+                Return to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

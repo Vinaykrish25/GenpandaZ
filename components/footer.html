@@ -1,0 +1,42 @@
+<footer class="border-t border-border py-12 bg-card">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <img 
+                    src="assets/images/Gen PandaZ logo.png" 
+                    alt="GenpandaZ" 
+                    class="h-40 w-auto mb-4" 
+                />
+                <p class="mt-3 text-sm text-muted-foreground max-w-sm leading-relaxed">
+                    A young, bold digital agency building brands through design, development, and data-driven marketing.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-sm mb-3">Quick Links</h4>
+                <ul class="space-y-2 text-sm text-muted-foreground">
+                    <li><a href="#about" class="hover:text-foreground transition-colors">About</a></li>
+                    <li><a href="#services" class="hover:text-foreground transition-colors">Services</a></li>
+                    <li><a href="#portfolio" class="hover:text-foreground transition-colors">Portfolio</a></li>
+                    <li><a href="#contact" class="hover:text-foreground transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-sm mb-3">Services</h4>
+                <ul class="space-y-2 text-sm text-muted-foreground">
+                    <li><span>Web Development</span></li>
+                    <li><span>Digital Marketing</span></li>
+                    <li><span>Automation</span></li>
+                    <li><span>Web Analytics</span></li>
+                    <li><span>Graphic & Poster Design</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-10 pt-6 border-t border-border text-center text-sm text-muted-foreground">
+            © <span id="current-year"></span> GenpandaZ. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>

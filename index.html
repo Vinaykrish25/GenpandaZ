@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenpandaZ – Digital Agency | Web, Marketing & Design</title>
+    <meta name="description" content="GenpandaZ is a data-driven digital agency specializing in web development, digital marketing, video editing, graphic design, and automation." />
+    <meta name="author" content="GenpandaZ" />
+    <link rel="icon" type="image/png" href="assets/images/Gen PandaZ logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/Gen PandaZ logo.png" />
+    <link rel="apple-touch-icon" href="assets/images/Gen PandaZ logo.png" />
+    <link rel="canonical" href="https://genpandaz.com" />
+
+    <meta property="og:title" content="GenpandaZ – Digital Agency" />
+    <meta property="og:description" content="Young, bold digital agency building powerful brands through design, development, and data-driven marketing." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/Gen PandaZ logo.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@genpandaz" />
+    <meta name="twitter:image" content="assets/images/Gen PandaZ logo.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                container: {
+                    center: true,
+                    padding: '2rem',
+                    screens: {
+                        '2xl': '1400px',
+                    },
+                },
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        primary: {
+                            DEFAULT: 'hsl(var(--primary))',
+                            foreground: 'hsl(var(--primary-foreground))',
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(var(--secondary))',
+                            foreground: 'hsl(var(--secondary-foreground))',
+                        },
+                        destructive: {
+                            DEFAULT: 'hsl(var(--destructive))',
+                            foreground: 'hsl(var(--destructive-foreground))',
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))',
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(var(--accent))',
+                            foreground: 'hsl(var(--accent-foreground))',
+                        },
+                        popover: {
+                            DEFAULT: 'hsl(var(--popover))',
+                            foreground: 'hsl(var(--popover-foreground))',
+                        },
+                        card: {
+                            DEFAULT: 'hsl(var(--card))',
+                            foreground: 'hsl(var(--card-foreground))',
+                        },
+                    },
+                    borderRadius: {
+                        lg: 'var(--radius)',
+                        md: 'calc(var(--radius) - 2px)',
+                        sm: 'calc(var(--radius) - 4px)',
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body class="bg-background text-foreground font-sans antialiased">
+    <div data-component="navbar"></div>
+
+    <main class="scroll-smooth">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+            <!-- Gradient orbs -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-primary/20 blur-3xl animate-pulse"></div>
+                <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-accent/20 blur-3xl animate-pulse"></div>
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <div class="reveal inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-8">
+                    <i data-lucide="sparkles" class="h-4 w-4 text-accent"></i>
+                    Data-driven digital solutions
+                </div>
+
+                <h1 class="reveal font-display text-4xl sm:text-5xl md:text-7xl font-bold leading-tight max-w-4xl mx-auto" style="transition-delay: 0.1s;">
+                    We Build Digital
+                    <span class="gradient-text">Experiences</span>
+                    That Matter
+                </h1>
+
+                <p class="reveal mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance" style="transition-delay: 0.2s;">
+                    GenpandaZ is a young, bold digital agency turning ideas into powerful brands through design, development, and data-driven marketing.
+                </p>
+
+                <div class="reveal mt-10 flex flex-col sm:flex-row gap-4 justify-center" style="transition-delay: 0.3s;">
+                    <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 gradient-bg text-primary-foreground hover:opacity-90">
+                        Start Your Project <i data-lucide="arrow-right" class="ml-1 h-4 w-4"></i>
+                    </a>
+                    <a href="#portfolio" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 border border-input bg-background hover:bg-accent hover:text-accent-foreground">
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other sections will be added here -->
+        <div id="about-section"></div>
+        <div id="services-section"></div>
+        <div id="why-choose-us-section"></div>
+        <div id="portfolio-section"></div>
+        <div id="products-section"></div>
+        <div id="testimonials-section"></div>
+        <div id="contact-section"></div>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <!-- Scripts -->
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+        document.addEventListener('componentLoaded', () => lucide.createIcons());
+    </script>
+    
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/home.js"></script>
+</body>
+
+</html>

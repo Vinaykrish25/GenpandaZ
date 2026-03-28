@@ -1,0 +1,8 @@
+[
+  { "icon": "globe", "title": "Website Development", "image": "assets/images/services/dev.png", "desc": "E-commerce, SaaS, and portfolio sites built with modern tech stacks for speed and scalability." },
+  { "icon": "wrench", "title": "Website Maintenance", "image": "assets/images/services/maintenance.png", "desc": "Ongoing support, updates, and performance monitoring to keep your site running flawlessly." },
+  { "icon": "megaphone", "title": "Digital Marketing", "image": "assets/images/services/marketing.png", "desc": "SEO, social media marketing, and paid campaigns that drive real, measurable results." },
+  { "icon": "palette", "title": "Graphic & Poster Design", "image": "assets/images/services/design.png", "desc": "Eye-catching visuals, brand identity, and marketing materials that stand out." },
+  { "icon": "bar-chart-3", "title": "Website Analytics", "image": "assets/images/services/analytics.png", "desc": "Data-driven insights and reporting to understand user behavior and optimize conversions." },
+  { "icon": "bot", "title": "Automation", "image": "assets/images/services/automation.png", "desc": "Email, call, and form automation to streamline workflows and boost efficiency." }
+]

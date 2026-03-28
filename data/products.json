@@ -1,0 +1,20 @@
+[
+  {
+    "title": "MailPro",
+    "description": "AI-powered email generator and sender via Gmail.",
+    "category": "AI Tool",
+    "image": "assets/images/products/mailpro.png",
+    "icon": "mail",
+    "link": "https://genmail-pro-ai.vercel.app/",
+    "status": "Active"
+  },
+  {
+    "title": "Portfolio Generator",
+    "description": "Generate professional portfolios tailored to your needs.",
+    "category": "Builder",
+    "color": "from-cyan-500 to-blue-600",
+    "icon": "layout",
+    "link": "#",
+    "status": "Coming Soon"
+  }
+]

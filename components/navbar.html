@@ -1,0 +1,44 @@
+<nav class="fixed top-0 left-0 right-0 z-50 glass-card">
+    <div class="container mx-auto flex items-center justify-between h-16 px-4">
+        <a href="#" class="flex items-center">
+            <img 
+                src="assets/images/Gen PandaZ logo.png" 
+                alt="GenpandaZ" 
+                class="h-40 w-auto" 
+            />
+        </a>
+
+        <!-- Desktop -->
+        <div class="hidden md:flex items-center gap-6">
+            <a href="#about" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</a>
+            <a href="#services" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Services</a>
+            <a href="#products" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Products</a>
+            <a href="#portfolio" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Portfolio</a>
+            <a href="#contact" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+            
+            <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 px-3 gradient-bg text-primary-foreground hover:opacity-90">
+                Get Started
+            </a>
+        </div>
+
+        <!-- Mobile -->
+        <div class="flex md:hidden items-center gap-2">
+            <button id="mobile-menu-button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 w-10 hover:bg-accent hover:text-accent-foreground">
+                <svg id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                <svg id="menu-close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-border px-4 pb-4 space-y-2">
+        <a href="#about" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</a>
+        <a href="#services" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Services</a>
+        <a href="#products" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Products</a>
+        <a href="#portfolio" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Portfolio</a>
+        <a href="#contact" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+        <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 px-3 w-full gradient-bg text-primary-foreground hover:opacity-90">
+            Get Started
+        </a>
+    </div>
+</nav>
