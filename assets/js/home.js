@@ -53,8 +53,8 @@ function renderAbout() {
                     </div>
 
                     <div class="reveal space-y-8">
-                        <p class="text-lg text-muted-foreground leading-relaxed">
-                            GenpandaZ is your strategic partner in digital transformation. We specialize in building high-impact digital products that drive growth. Our expertise spans full-stack web development, intelligent AI automation, and user-centric UI/UX design.
+                        <p class="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                            GenpandaZ is your strategic partner in digital transformation. We specialize in building high-impact digital products that drive growth. Our expertise spans full-stack web development, intelligent AI automation, performance-driven digital marketing, and user-centric UI/UX design.
                         </p>
                         <p class="text-lg text-muted-foreground leading-relaxed">
                             With a remote-first mindset, we provide unparalleled flexibility and cost-efficiency to clients globally. We are committed to building scalable, future-ready systems that help businesses stay ahead in an ever-evolving digital landscape.
@@ -501,7 +501,7 @@ function renderRemoteAdvantage() {
                            GenpandaZ works remotely with clients across India including Chennai, Bangalore, Hyderabad, and Coimbatore. Our remote-first approach ensures flexibility, faster delivery, and cost-effective solutions without compromising quality.
                         </p>
                         <p class="text-lg text-muted-foreground leading-relaxed">
-                            We help you hire remote developers in India and build a dedicated remote tech team for your business. Our expertise in distributed team management allows us to integrate seamlessly with your existing workflows, providing high-quality software development and AI automation services regardless of your location.
+                            We help you hire remote developers in India and build a dedicated remote tech team for your business. Our expertise in distributed team management allows us to integrate seamlessly with your existing workflows, providing high-quality software development, AI automation, and digital marketing services regardless of your location.
                         </p>
                         <p class="text-lg text-muted-foreground leading-relaxed">
                             Our remote-first culture is built on trust and efficiency, allowing us to deliver scalable SaaS solutions and custom software with unmatched speed. We leverage modern collaboration tools to keep you updated at every stage, ensuring your vision is brought to life with precision and excellence.
@@ -585,10 +585,14 @@ function renderFAQ() {
     if (!section) return;
 
     const faqs = [
-        { q: "What services does GenpandaZ offer?", a: "We offer website development, AI automation, UI/UX design, and custom software development." },
+        { q: "What services does GenpandaZ offer?", a: "We offer website development, AI automation, UI/UX design, digital marketing, website maintenance, and custom software development." },
         { q: "Do you work with startups?", a: "Yes, we specialize in working with startups and growing businesses." },
         { q: "Do you provide remote services across India?", a: "Yes, we work remotely with clients all across India." },
-        { q: "Can you help build SaaS products?", a: "Yes, we provide MVP and full SaaS product development." }
+        { q: "Can you help build SaaS products?", a: "Yes, we provide MVP and full SaaS product development." },
+        { q: "Do you offer digital marketing services?", a: "Yes, we provide SEO, social media management, and PPC ad campaigns to help startups grow their online presence." },
+        { q: "How much does it cost to build a website with GenpandaZ?", a: "We offer affordable website development for startups and businesses with transparent pricing tailored to your project scope." },
+        { q: "How long does it take to develop a custom software solution?", a: "Most startup MVPs and custom software projects are delivered within 8 to 12 weeks, depending on complexity, using our agile remote-first delivery model." },
+        { q: "Does GenpandaZ provide post-launch support and maintenance?", a: "Yes, we provide comprehensive website maintenance, security updates, and performance optimization to ensure your digital product remains high-performing." }
     ];
 
     section.innerHTML = `

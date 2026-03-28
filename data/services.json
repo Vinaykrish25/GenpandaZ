@@ -54,5 +54,33 @@
       "MVP development for startups",
       "Web & mobile applications"
     ]
+  },
+  {
+    "icon": "megaphone",
+    "title": "Digital Marketing",
+    "subheading": "Performance-Driven Digital Marketing Services",
+    "image": "assets/images/services/marketing.png",
+    "shortDesc": "Grow your brand with SEO, social media marketing, and targeted ad campaigns designed for high conversion.",
+    "longDesc": "We provide professional digital marketing services in India to help startups and businesses reach their target audience and drive sales. Our expert team leverages data-driven strategies to optimize your online presence and ensure a high ROI for your marketing budget.",
+    "bullets": [
+      "SEO & Google Ranking",
+      "Social Media Management",
+      "PPC Ad Campaigns",
+      "Content Marketing Strategy"
+    ]
+  },
+  {
+    "icon": "shield-check",
+    "title": "Website Maintenance",
+    "subheading": "Reliable Website Maintenance & Security",
+    "image": "assets/images/services/maintenance.png",
+    "shortDesc": "Keep your website fast, secure, and up-to-date with our comprehensive maintenance and support plans.",
+    "longDesc": "Our website maintenance services in India ensure that your business website stays secure and functional at all times. We handle everything from security patches and plugin updates to speed optimization and minor design tweaks.",
+    "bullets": [
+      "24/7 Security Monitoring",
+      "Regular Backups & Updates",
+      "Speed & Performance Optimization",
+      "Technical Support & Fixes"
+    ]
   }
 ]
