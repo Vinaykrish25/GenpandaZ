@@ -33,5 +33,89 @@
     "image": "assets/images/projects/photography.png",
     "icon": "camera",
     "link": "https://photography-studio-mocha.vercel.app/"
+  },
+  { 
+    "title": "ArenaPro: Elite Sports Management", 
+    "category": "Management System", 
+    "image": "assets/images/projects/arena-pro.png",
+    "icon": "activity",
+    "link": "https://sports-arena-management-system.vercel.app/"
+  },
+  { 
+    "title": "Eventique: Premium Event Orchestration", 
+    "category": "Event Solutions", 
+    "image": "assets/images/projects/eventique.png",
+    "icon": "calendar",
+    "link": "https://event-management-peach-nu.vercel.app/"
+  },
+  { 
+    "title": "AutoStream: Advanced Sales Solutions", 
+    "category": "CRM & Sales", 
+    "image": "assets/images/projects/autostream.png",
+    "icon": "car",
+    "link": "https://automobile-sales-management-system.vercel.app/"
+  },
+  { 
+    "title": "PixelPulse: Immersive Gaming", 
+    "category": "Booking System", 
+    "image": "assets/images/projects/pixelpulse.png",
+    "icon": "gamepad-2",
+    "link": "https://gamecenter-gilt.vercel.app/"
+  },
+  { 
+    "title": "SmileDirect: Premium Dental Scheduling", 
+    "category": "Healthcare", 
+    "image": "assets/images/projects/smiledirect.png",
+    "icon": "briefcase-medical",
+    "link": "https://dental-websites-tau.vercel.app/"
+  },
+  { 
+    "title": "SonicEase: High-Fidelity Audio", 
+    "category": "E-commerce", 
+    "image": "assets/images/projects/sonicease.png",
+    "icon": "headphones",
+    "link": "https://audio-ecommerce-ruddy.vercel.app/"
+  },
+  { 
+    "title": "RigLogic: Custom PC Configuration", 
+    "category": "Configuration Tool", 
+    "image": "assets/images/projects/riglogic.png",
+    "icon": "monitor",
+    "link": "https://pc-builder-website-self.vercel.app/"
+  },
+  { 
+    "title": "FitFlow: Holistic Wellness & Fitness", 
+    "category": "Wellness & Fitness", 
+    "image": "assets/images/projects/fitflow.png",
+    "icon": "heart",
+    "link": "https://strong-spark-page.lovable.app"
+  },
+  { 
+    "title": "BrewBreeze: Gourmet Coffee Experience", 
+    "category": "Retail & Lifestyle", 
+    "image": "assets/images/projects/brewbreeze.png",
+    "icon": "coffee",
+    "link": "https://brew-breeze-bliss.lovable.app/"
+  },
+  { 
+    "title": "ZenFlow: Serene Spa Reservation", 
+    "category": "Booking System", 
+    "image": "assets/images/projects/zenflow.png",
+    "icon": "flower-2",
+    "link": "https://peace-and-flow-site.lovable.app/"
+  },
+  { 
+    "title": "ChicStyles: Elite Salon & Beauty", 
+    "category": "Booking System", 
+    "image": "assets/images/projects/chicstyles.png",
+    "icon": "scissors",
+    "link": "https://book-chic-style.lovable.app/"
+  },
+  { 
+    "title": "StyleSpotlight: Curated Fashion", 
+    "category": "E-commerce", 
+    "image": "assets/images/projects/stylespotlight.png",
+    "icon": "shopping-bag",
+    "link": "https://style-spotlight-ecom.lovable.app/"
   }
 ]
