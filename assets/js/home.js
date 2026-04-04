@@ -78,65 +78,54 @@ async function renderServices() {
         const services = await response.json();
 
         section.innerHTML = `
-            <section id="services" class="py-16 bg-secondary/30">
+            <section id="services" class="py-24 bg-secondary/30">
                 <div class="container mx-auto px-4">
-                    <div class="reveal text-center max-w-4xl mx-auto">
+                    <div class="reveal text-center max-w-4xl mx-auto mb-16">
                         <h2 class="font-display text-4xl md:text-5xl font-bold">
-                            Our IT Services in <span class="gradient-text">India</span>
+                            What We <span class="gradient-text">Offer</span>
                         </h2>
-                        <h3 class="mt-4 text-xl font-medium text-primary uppercase tracking-wider">Remote-First Solutions</h3>
-                        <p class="mt-6 text-muted-foreground text-lg leading-relaxed">
-                            GenpandaZ is a remote-first IT services company in India offering end-to-end digital solutions including website development, AI automation, UI/UX design, and custom software development. We help startups and businesses build scalable, future-ready products.
+                        <p class="mt-4 text-muted-foreground text-lg italic">
+                            Customized solutions to grow your business with smart digital systems.
                         </p>
                     </div>
 
-                    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-stretch">
                         ${services.map((s, i) => `
-                            <div class="reveal" style="transition-delay: ${i * 0.1}s;">
-                                <div class="glass-card rounded-3xl overflow-hidden h-full group hover:shadow-2xl transition-all duration-500 border border-white/10 flex flex-col">
-                                    <div class="h-64 relative overflow-hidden">
+                            <div class="reveal flex" style="transition-delay: ${i * 0.1}s;">
+                                <div class="glass-card rounded-[2rem] overflow-hidden group hover:shadow-2xl transition-all duration-500 border border-white/10 flex flex-col w-full bg-card">
+                                    <div class="h-48 relative overflow-hidden shrink-0">
                                         <img 
                                             src="${s.image}" 
                                             alt="${s.title}" 
                                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                        <div class="absolute bottom-6 left-6 z-10">
-                                            <div class="h-12 w-12 rounded-2xl gradient-bg flex items-center justify-center mb-3">
-                                                <i data-lucide="${s.icon.toLowerCase()}" class="h-6 w-6 text-primary-foreground"></i>
-                                            </div>
-                                            <h3 class="text-2xl font-bold text-white">${s.title}</h3>
-                                        </div>
+                                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                                     </div>
-                                    <div class="p-8 flex-1 flex flex-col">
-                                        <h4 class="text-primary font-semibold mb-3">${s.subheading}</h4>
-                                        <p class="text-muted-foreground leading-relaxed transition-all duration-300">
+                                    
+                                    <div class="p-8 pt-10 relative flex-1 flex flex-col">
+                                        <!-- Floating Icon -->
+                                        <div class="service-icon-float bg-primary text-primary-foreground">
+                                            <i data-lucide="${s.icon.toLowerCase()}" class="h-6 w-6 text-white"></i>
+                                        </div>
+
+                                        <h3 class="text-2xl font-bold mb-4 leading-tight">${s.title}</h3>
+                                        <p class="text-muted-foreground text-sm leading-relaxed mb-6">
                                             ${s.shortDesc}
                                         </p>
                                         
-                                        <div id="service-content-${i}" class="hidden mt-6 space-y-6 animate-in fade-in slide-in-from-top-4 duration-500">
-                                            <p class="text-muted-foreground leading-relaxed italic border-l-2 border-primary/30 pl-4">
-                                                ${s.longDesc}
-                                            </p>
-                                            <ul class="grid grid-cols-1 gap-3">
-                                                ${s.bullets.map(b => `
-                                                    <li class="flex items-center gap-3 text-sm font-medium">
-                                                        <i data-lucide="check-circle-2" class="h-4 w-4 text-primary shrink-0"></i>
-                                                        ${b}
-                                                    </li>
-                                                `).join('')}
-                                            </ul>
-                                        </div>
+                                        <ul class="space-y-4 mb-8">
+                                            ${s.bullets.map(b => `
+                                                <li class="flex items-center gap-3 text-sm font-medium text-muted-foreground">
+                                                    <i data-lucide="check-circle-2" class="h-4 w-4 text-primary shrink-0"></i>
+                                                    ${b}
+                                                </li>
+                                            `).join('')}
+                                        </ul>
 
-                                        <div class="mt-auto pt-8">
-                                            <button 
-                                                id="service-btn-${i}"
-                                                onclick="toggleService(${i})"
-                                                class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:gap-3 transition-all group/btn"
-                                            >
-                                                <span>Read More</span>
-                                                <i data-lucide="chevron-down" class="h-4 w-4 transition-transform group-open:rotate-180"></i>
-                                            </button>
+                                        <div class="mt-auto">
+                                            <a href="#contact" class="w-full inline-flex items-center justify-center h-12 rounded-xl text-sm font-bold transition-all btn-service-outline">
+                                                ${s.ctaText || 'Learn More'}
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -150,38 +139,6 @@ async function renderServices() {
     } catch (err) {
         console.error('Error rendering services', err);
     }
-}
-
-window.toggleService = (id) => {
-    const allContents = document.querySelectorAll('[id^="service-content-"]');
-    const allBtns = document.querySelectorAll('[id^="service-btn-"]');
-
-    const targetContent = document.getElementById(`service-content-${id}`);
-    const isExpanding = targetContent.classList.contains('hidden');
-
-    // Close all other cards
-    allContents.forEach((content, index) => {
-        const btn = document.getElementById(`service-btn-${index}`);
-        const icon = btn.querySelector('[data-lucide]');
-
-        if (index === id) {
-            if (isExpanding) {
-                content.classList.remove('hidden');
-                btn.querySelector('span').textContent = 'Read Less';
-                if (icon) icon.style.transform = 'rotate(180deg)';
-            } else {
-                content.classList.add('hidden');
-                btn.querySelector('span').textContent = 'Read More';
-                if (icon) icon.style.transform = 'rotate(0deg)';
-            }
-        } else {
-            content.classList.add('hidden');
-            if (btn) {
-                btn.querySelector('span').textContent = 'Read More';
-                if (icon) icon.style.transform = 'rotate(0deg)';
-            }
-        }
-    });
 }
 
 function renderWhyChooseUs() {

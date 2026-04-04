@@ -129,6 +129,34 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
+/* Service Card Refactoring */
+.service-icon-float {
+  position: absolute;
+  top: -24px;
+  left: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 4px solid hsl(var(--card));
+  z-index: 20;
+}
+
+.btn-service-outline {
+  background-color: transparent;
+  color: hsl(var(--primary));
+  border: 1px solid hsl(var(--primary));
+  transition: all 0.3s ease;
+}
+
+.btn-service-outline:hover {
+  background-color: hsl(var(--primary));
+  color: white;
+}
+
 /* Tailwind Utilities needed for CDN */
 @layer base {
   * {

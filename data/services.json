@@ -1,35 +1,39 @@
 [
   {
     "icon": "layout",
-    "title": "Website Development",
+    "title": "Websites That Generate Leads",
     "subheading": "Website Development Services in India",
     "image": "assets/images/services/dev.png",
     "shortDesc": "Professional website development services in India for startups, small businesses, and growing brands.",
     "longDesc": "We build fast, responsive, and SEO-friendly websites that convert visitors into customers. Our team specializes in affordable website development for startups and responsive web design in India.",
     "bullets": [
-      "Custom business websites",
-      "Startup landing pages",
+      "Lead generation websites",
+      "Landing pages for ads",
       "E-commerce website development",
       "Performance & SEO optimization"
-    ]
+    ],
+    "ctaText": "View Solutions",
+    "ctaColor": "orange"
   },
   {
     "icon": "bot",
-    "title": "AI Automation",
+    "title": "AI Solutions for Business",
     "subheading": "AI Automation Services for Businesses",
     "image": "assets/images/services/automation.png",
     "shortDesc": "Automate repetitive tasks and improve efficiency using advanced AI automation solutions.",
     "longDesc": "From chatbots to workflow automation, we design smart systems that save time and increase productivity. We provide AI solutions for startups to streamline business automation using AI.",
     "bullets": [
-      "AI chatbots for customer support",
-      "Business workflow automation",
-      "AI tools integration",
+      "AI chatbots for websites",
+      "Lead qualification bots",
+      "24/7 customer support automation",
       "Data-driven automation solutions"
-    ]
+    ],
+    "ctaText": "Discover AI Tools",
+    "ctaColor": "blue"
   },
   {
     "icon": "palette",
-    "title": "UI/UX Design",
+    "title": "User-Centric Digital Design",
     "subheading": "UI/UX Design Services for Startups",
     "image": "assets/images/services/design.png",
     "shortDesc": "Creating intuitive, user-friendly, and visually engaging digital experiences.",
@@ -39,39 +43,45 @@
       "User experience optimization",
       "Wireframing & prototyping",
       "Design systems for scalability"
-    ]
+    ],
+    "ctaText": "Explore Designs",
+    "ctaColor": "purple"
   },
   {
     "icon": "code",
-    "title": "Software Development",
+    "title": "Scalable Software Solutions",
     "subheading": "Custom Software Development Services",
     "image": "assets/images/services/dev.png",
     "shortDesc": "Scalable software development services tailored to your business needs.",
     "longDesc": "From MVP development to full-scale applications, we build secure and high-performance solutions. As a leading software development company in India, we provide expert SaaS development and custom software solutions.",
     "bullets": [
-      "Custom business software",
+      "Booking & automation systems",
+      "WhatsApp automation",
       "SaaS product development",
-      "MVP development for startups",
-      "Web & mobile applications"
-    ]
+      "Custom business software"
+    ],
+    "ctaText": "See How It Works",
+    "ctaColor": "green"
   },
   {
     "icon": "megaphone",
-    "title": "Digital Marketing",
+    "title": "Performance Growth Marketing",
     "subheading": "Performance-Driven Digital Marketing Services",
     "image": "assets/images/services/marketing.png",
     "shortDesc": "Grow your brand with SEO, social media marketing, and targeted ad campaigns designed for high conversion.",
     "longDesc": "We provide professional digital marketing services in India to help startups and businesses reach their target audience and drive sales. Our expert team leverages data-driven strategies to optimize your online presence and ensure a high ROI for your marketing budget.",
     "bullets": [
-      "SEO & Google Ranking",
-      "Social Media Management",
-      "PPC Ad Campaigns",
-      "Content Marketing Strategy"
-    ]
+      "Conversion rate optimization",
+      "Analytics & reporting",
+      "Performance tracking",
+      "SEO & Google Ranking"
+    ],
+    "ctaText": "Optimize My Business",
+    "ctaColor": "orange"
   },
   {
     "icon": "shield-check",
-    "title": "Website Maintenance",
+    "title": "Secure Website Maintenance",
     "subheading": "Reliable Website Maintenance & Security",
     "image": "assets/images/services/maintenance.png",
     "shortDesc": "Keep your website fast, secure, and up-to-date with our comprehensive maintenance and support plans.",
@@ -81,6 +91,8 @@
       "Regular Backups & Updates",
       "Speed & Performance Optimization",
       "Technical Support & Fixes"
-    ]
+    ],
+    "ctaText": "Secure My Site",
+    "ctaColor": "blue"
   }
 ]
