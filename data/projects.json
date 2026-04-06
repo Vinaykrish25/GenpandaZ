@@ -74,14 +74,14 @@
     "category": "E-commerce", 
     "image": "assets/images/projects/sonicease.png",
     "icon": "headphones",
-    "link": "https://audio-ecommerce-ruddy.vercel.app/"
+    "link": "https://audio-speaker-ecommercesite.vercel.app"
   },
   { 
     "title": "RigLogic: Custom PC Configuration", 
     "category": "Configuration Tool", 
     "image": "assets/images/projects/riglogic.png",
     "icon": "monitor",
-    "link": "https://pc-builder-website-self.vercel.app/"
+    "link": "https://pc-builder-websites.vercel.app"
   },
   { 
     "title": "FitFlow: Holistic Wellness & Fitness", 
