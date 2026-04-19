@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://genpandaz.com/sitemap.xml
+# Block non-essential directories
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /.env
+
+# Allow important assets
+Allow: /assets/images/
+
+# Sitemaps
+Sitemap: https://www.genpandaz.com/sitemap.xml
